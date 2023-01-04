@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "businesses",
+  "info": {
+    "singularName": "business",
+    "pluralName": "businesses",
+    "displayName": "business",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 25,
+      "unique": true
+    },
+    "user": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 30,
+      "minLength": 4
+    },
+    "password": {
+      "type": "password",
+      "required": true,
+      "minLength": 4
+    },
+    "adress": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "totalRates": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "default": 0
+    },
+    "totalRated": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "required": true
+    },
+    "staff": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::staf.staf",
+      "mappedBy": "business"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "business"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "businesses"
+    },
+    "banned": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
