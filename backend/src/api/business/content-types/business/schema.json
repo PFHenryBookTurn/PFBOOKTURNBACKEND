@@ -48,18 +48,6 @@
       "default": 0,
       "required": true
     },
-    "staff": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::staf.staf",
-      "mappedBy": "business"
-    },
-    "services": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::service.service",
-      "mappedBy": "business"
-    },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
@@ -70,6 +58,20 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "BusinessPic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "mappedBy": "businesses"
     }
   }
 }

@@ -26,12 +26,6 @@
       ],
       "type": "media",
       "multiple": false
-    },
-    "business": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::business.business",
-      "inversedBy": "staff"
     }
   }
 }
