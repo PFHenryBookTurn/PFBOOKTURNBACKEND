@@ -72,6 +72,14 @@
       "relation": "manyToMany",
       "target": "api::service.service",
       "mappedBy": "businesses"
+    },
+    "profileIImg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
     }
   }
 }
