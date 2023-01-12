@@ -27,11 +27,14 @@
       "target": "api::business.business",
       "inversedBy": "services"
     },
-    "categories": {
+    "active": {
+      "type": "boolean"
+    },
+    "booking": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "mappedBy": "services"
+      "relation": "manyToOne",
+      "target": "api::booking.booking",
+      "inversedBy": "services"
     }
   }
 }

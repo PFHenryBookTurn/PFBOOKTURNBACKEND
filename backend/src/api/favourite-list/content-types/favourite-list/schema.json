@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favourite_lists",
+  "info": {
+    "singularName": "favourite-list",
+    "pluralName": "favourite-lists",
+    "displayName": "favouriteList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "businesses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::business.business",
+      "mappedBy": "favourite_list"
+    }
+  }
+}

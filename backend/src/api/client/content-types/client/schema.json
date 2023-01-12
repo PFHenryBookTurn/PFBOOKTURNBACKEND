@@ -4,45 +4,46 @@
   "info": {
     "singularName": "client",
     "pluralName": "clients",
-    "displayName": "Client"
+    "displayName": "Client",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "nameComplete": {
       "type": "string",
       "required": true
     },
-    "lastname": {
-      "type": "string",
-      "required": true
-    },
-    "user": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "password": {
-      "type": "password",
-      "required": true
-    },
-    "email": {
-      "type": "email",
-      "required": true
-    },
-    "totalRates": {
-      "type": "integer",
+    "profilePic": {
+      "type": "media",
+      "multiple": true,
       "required": false,
-      "min": 0,
-      "default": 0
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
-    "totalRated": {
-      "type": "integer",
-      "required": false,
-      "min": 0,
-      "default": 0
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "client"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "client"
+    },
+    "history_list": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::history-list.history-list",
+      "mappedBy": "client"
     }
   }
 }

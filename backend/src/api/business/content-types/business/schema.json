@@ -19,45 +19,16 @@
       "maxLength": 25,
       "unique": true
     },
-    "user": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "maxLength": 30,
-      "minLength": 4
-    },
-    "password": {
-      "type": "password",
-      "required": true,
-      "minLength": 4
-    },
     "adress": {
       "type": "string",
       "required": true,
       "minLength": 2
-    },
-    "totalRates": {
-      "type": "integer",
-      "required": true,
-      "min": 0,
-      "default": 0
-    },
-    "totalRated": {
-      "type": "integer",
-      "min": 0,
-      "default": 0,
-      "required": true
     },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "businesses"
-    },
-    "banned": {
-      "type": "boolean",
-      "default": false,
-      "required": true
     },
     "BusinessPic": {
       "type": "media",
@@ -73,13 +44,35 @@
       "target": "api::service.service",
       "mappedBy": "businesses"
     },
-    "profileIImg": {
-      "allowedTypes": [
-        "images"
-      ],
+    "telephone": {
+      "type": "string",
+      "required": true
+    },
+    "galleryPhotos": {
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "business"
+    },
+    "favourite_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::favourite-list.favourite-list",
+      "inversedBy": "businesses"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "businesses"
     }
   }
 }

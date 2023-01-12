@@ -20,12 +20,6 @@
       "relation": "manyToMany",
       "target": "api::business.business",
       "inversedBy": "categories"
-    },
-    "services": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::service.service",
-      "inversedBy": "categories"
     }
   }
 }
