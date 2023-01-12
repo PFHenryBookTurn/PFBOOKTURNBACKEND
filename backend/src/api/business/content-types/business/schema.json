@@ -19,7 +19,7 @@
       "maxLength": 25,
       "unique": true
     },
-    "adress": {
+    "address": {
       "type": "string",
       "required": true,
       "minLength": 2
@@ -56,12 +56,6 @@
         "images"
       ]
     },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "business"
-    },
     "favourite_list": {
       "type": "relation",
       "relation": "manyToOne",
@@ -73,6 +67,15 @@
       "relation": "manyToMany",
       "target": "api::booking.booking",
       "mappedBy": "businesses"
+    },
+    "email": {
+      "type": "email"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "business"
     }
   }
 }

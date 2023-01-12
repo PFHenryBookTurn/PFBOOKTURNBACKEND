@@ -67,13 +67,13 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::business.business",
-      "mappedBy": "users_permissions_user"
+      "mappedBy": "user"
     },
     "client": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::client.client",
-      "mappedBy": "users_permissions_user"
+      "mappedBy": "user"
     }
   }
 }
