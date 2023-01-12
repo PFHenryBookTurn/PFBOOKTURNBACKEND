@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * staf service
+ * rating service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::staf.staf');
+module.exports = createCoreService('api::rating.rating');

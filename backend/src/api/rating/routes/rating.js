@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * staf router
+ * rating router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::staf.staf');
+module.exports = createCoreRouter('api::rating.rating');

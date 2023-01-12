@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "history_lists",
+  "info": {
+    "singularName": "history-list",
+    "pluralName": "history-lists",
+    "displayName": "HistoryList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "history_list"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client.client",
+      "inversedBy": "history_list"
+    }
+  }
+}

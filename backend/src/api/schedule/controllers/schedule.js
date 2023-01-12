@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * staf controller
+ * schedule controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::staf.staf');
+module.exports = createCoreController('api::schedule.schedule');
