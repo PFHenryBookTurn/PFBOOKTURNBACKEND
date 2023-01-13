@@ -18,9 +18,15 @@
   "attributes": {
     "businesses": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::business.business",
-      "mappedBy": "favourite_list"
+      "mappedBy": "favourite_lists"
+    },
+    "clients": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::client.client",
+      "mappedBy": "favourite_lists"
     }
   }
 }
