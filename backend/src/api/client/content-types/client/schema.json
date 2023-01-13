@@ -44,6 +44,12 @@
       "relation": "oneToOne",
       "target": "api::history-list.history-list",
       "mappedBy": "client"
+    },
+    "favourite_lists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::favourite-list.favourite-list",
+      "inversedBy": "clients"
     }
   }
 }
