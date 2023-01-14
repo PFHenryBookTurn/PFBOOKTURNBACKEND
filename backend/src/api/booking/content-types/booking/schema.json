@@ -4,7 +4,8 @@
   "info": {
     "singularName": "booking",
     "pluralName": "bookings",
-    "displayName": "Booking"
+    "displayName": "Booking",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -29,17 +30,15 @@
       "target": "api::service.service",
       "mappedBy": "booking"
     },
-    "schedule": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::schedule.schedule",
-      "inversedBy": "booking"
-    },
     "history_list": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::history-list.history-list",
       "inversedBy": "bookings"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

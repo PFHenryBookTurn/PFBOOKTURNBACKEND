@@ -76,6 +76,17 @@
       "relation": "manyToMany",
       "target": "api::favourite-list.favourite-list",
       "inversedBy": "businesses"
+    },
+    "openhour": {
+      "type": "integer",
+      "required": true,
+      "max": 24,
+      "min": 0
+    },
+    "closehour": {
+      "type": "integer",
+      "max": 24,
+      "min": 0
     }
   }
 }
