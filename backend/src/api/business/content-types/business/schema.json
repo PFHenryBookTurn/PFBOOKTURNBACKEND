@@ -79,7 +79,7 @@
     },
     "openhour": {
       "type": "integer",
-      "required": true,
+      "required": false,
       "max": 24,
       "min": 0
     },

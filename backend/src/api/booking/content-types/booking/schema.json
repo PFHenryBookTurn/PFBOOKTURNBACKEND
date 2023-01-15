@@ -30,12 +30,6 @@
       "target": "api::service.service",
       "mappedBy": "booking"
     },
-    "history_list": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::history-list.history-list",
-      "inversedBy": "bookings"
-    },
     "confirmed": {
       "type": "boolean",
       "default": false
