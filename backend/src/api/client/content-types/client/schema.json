@@ -39,12 +39,6 @@
       "target": "api::booking.booking",
       "mappedBy": "client"
     },
-    "history_list": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::history-list.history-list",
-      "mappedBy": "client"
-    },
     "favourite_lists": {
       "type": "relation",
       "relation": "manyToMany",
