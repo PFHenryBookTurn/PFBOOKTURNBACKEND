@@ -33,6 +33,9 @@
     "confirmed": {
       "type": "boolean",
       "default": false
+    },
+    "dateinfo": {
+      "type": "string"
     }
   }
 }
