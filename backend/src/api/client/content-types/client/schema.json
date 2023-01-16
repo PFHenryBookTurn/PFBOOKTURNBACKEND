@@ -44,6 +44,9 @@
       "relation": "manyToMany",
       "target": "api::favourite-list.favourite-list",
       "inversedBy": "clients"
+    },
+    "telephone": {
+      "type": "biginteger"
     }
   }
 }
