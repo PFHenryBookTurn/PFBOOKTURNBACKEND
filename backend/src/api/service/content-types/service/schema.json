@@ -28,7 +28,8 @@
       "inversedBy": "services"
     },
     "active": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "booking": {
       "type": "relation",
