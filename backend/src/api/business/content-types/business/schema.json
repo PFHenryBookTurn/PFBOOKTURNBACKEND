@@ -87,6 +87,12 @@
       "type": "integer",
       "max": 24,
       "min": 0
+    },
+    "ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rating.rating",
+      "mappedBy": "business"
     }
   }
 }
