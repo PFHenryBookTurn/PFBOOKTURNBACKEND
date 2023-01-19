@@ -47,6 +47,12 @@
     },
     "telephone": {
       "type": "biginteger"
+    },
+    "ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rating.rating",
+      "mappedBy": "client"
     }
   }
 }
