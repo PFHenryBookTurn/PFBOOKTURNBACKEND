@@ -93,6 +93,12 @@
       "relation": "oneToMany",
       "target": "api::rating.rating",
       "mappedBy": "business"
+    },
+    "totalRating": {
+      "type": "integer",
+      "default": 0,
+      "max": 5,
+      "min": 0
     }
   }
 }
