@@ -26,15 +26,18 @@
     },
     "services": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::service.service",
-      "mappedBy": "booking"
+      "mappedBy": "bookings"
     },
     "confirmed": {
       "type": "boolean",
       "default": false
     },
     "dateinfo": {
+      "type": "string"
+    },
+    "emailClient": {
       "type": "string"
     }
   }
